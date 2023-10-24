@@ -1,0 +1,108 @@
+{
+    "expo": {
+        "name": "pma-mobile",
+        "slug": "pma",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "owner": "jeloulatam",
+        "plugins": [
+            ["expo-image-picker"],
+            [
+                "expo-document-picker",
+                {
+                    "iCloudContainerEnvironment": "Production"
+                }
+            ],
+            [
+                "expo-media-library",
+                {
+                    "photosPermission": "Allow $(Jelou Connect) to access your photos.",
+                    "savePhotosPermission": "Allow $(Jelou Connect) to save photos.",
+                    "isAccessMediaLocationEnabled": true,
+                    "videoRollPermission": "Allow $(Jelou Connect) to access your videos."
+                }
+            ],
+            [
+                "expo-camera",
+                {
+                    "cameraPermission": "Allow $(Jelou Connect) to access your camera."
+                }
+            ],
+            [
+                "expo-image-picker",
+                [
+                    {
+                        "photosPermission": "Allow $(Jelou Connect) to access your photos"
+                    },
+                    {
+                        "cameraPermission": "Allow $(Jelou Connect) to access your camera"
+                    },
+                    {
+                        "videoPermission": "Allow $(Jelou Connect) to access your videos"
+                    },
+                    {
+                        "microphonePermission": "Allow $(Jelou Connect) to access your microphone"
+                    }
+                ]
+            ],
+            [
+                "expo-notifications",
+                {
+                    "sounds": ["./assets/newMsg.mp3"],
+                    "icon": "./assets/Adaptative.png"
+                }
+            ],
+            "expo-localization"
+        ],
+        "splash": {
+            "image": "./assets/LogIn-SplashScreen.png",
+            "resizeMode": "cover",
+            "backgroundColor": "#ffffff"
+        },
+        "assetBundlePatterns": ["**/*"],
+        "jsEngine": "hermes",
+        "ios": {
+            "jsEngine": "jsc",
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSCameraUsageDescription": "This app uses the camera to scan barcodes on event tickets.",
+                "NSPhotoLibraryUsageDescription": "Allow $(Jelou Connect) to access your photos.",
+                "NSPhotoLibraryAddUsageDescription": "Allow $(Jelou Connect) to save photos."
+            },
+            "bundleIdentifier": "com.jelou.pmamobile"
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/Adaptative.png",
+                "backgroundColor": "#ffffff"
+            },
+            "blockedPermissions": ["android.permission.RECORD_AUDIO"],
+            "permissions": [
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.ACCESS_MEDIA_LOCATION",
+                "android.permission.CAMERA",
+                "android.permission.RECORD_AUDIO"
+            ],
+            "package": "com.jelou.pmamobile"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "sdkVersion": "48.0.0",
+        "extra": {
+            "eas": {
+                "projectId": "cc252fee-d7d5-4bcb-bf01-70b0cc388692"
+            }
+        },
+        "runtimeVersion": {
+            "policy": "sdkVersion"
+        },
+        "updates": {
+            "url": "https://u.expo.dev/cc252fee-d7d5-4bcb-bf01-70b0cc388692"
+        }
+    },
+    "name": "pma-mobile"
+}
